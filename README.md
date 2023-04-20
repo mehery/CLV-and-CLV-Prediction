@@ -1,6 +1,6 @@
-## CLV-and-CLV-Prediction
+# CLV-and-CLV-Prediction
 
-What is Customer Lifetime Value(CLV)?
+##What is Customer Lifetime Value(CLV)?
 
 The monetary value a customer will bring to a company during their relationship and communication is known as "customer lifetime value."
 
@@ -23,7 +23,7 @@ CLV = (customer value / churn rate) * profit margin
 Customers are segmented based on the generated CLV value, and operations are carried out according to these segments.
 
 
-CLV Prediction with BG-NBD and Gamma-Gamma
+##CLV Prediction with BG-NBD and Gamma-Gamma
 
 CLTV Prediction: BG/NBD * Gamma gamma submodel
 
