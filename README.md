@@ -1,6 +1,7 @@
 ## CLV-and-CLV-Prediction
 
 What is Customer Lifetime Value(CLV)?
+
 The monetary value a customer will bring to a company during their relationship and communication is known as "customer lifetime value."
 
 We will achieve this by using the formulas below:
