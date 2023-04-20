@@ -1,5 +1,3 @@
-### CLV
-
 import datetime as dt
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +13,8 @@ pd.set_option('display.float_format', lambda x: '%.5f' % x)
 df = pd.read_csv("/kaggle/input/retail-store-sales-transactions/scanner_data.csv")
 
 
+
+### CLV
 
 # We are trying to understand the data.
 
@@ -117,7 +117,6 @@ def check_df(dataframe, head=10):
 check_df(df)
 
 
-
 # Data Preparation
 
 # We are converting the date in object format to datetime format using the datetime module.
@@ -183,12 +182,10 @@ cltv_pr["expected_purc_3_month"] = bgf.predict(4 * 3,
 cltv_pr.head()
 
 
-
 # Evaluation of Prediction Results
 
 plot_period_transactions(bgf)
 plt.show()
-
 
 
 # Setting up the Gamma-Gamma Model
@@ -204,7 +201,6 @@ cltv_pr["expected_average_profit"] = ggf.conditional_expected_average_profit(clt
 
 
 cltv_pr.sort_values("expected_average_profit", ascending=False).head(5)
-
 
 
 # Calculation of CLV prediction using BG-NBD and GG models.
@@ -226,12 +222,10 @@ cltv_pred = cltv_pred.reset_index()
 cltv_pred.head()
 
 
-
 # We combine CLV predictions with other variables.
 cltv_prediction = cltv_pr.merge(cltv_pred, on="Customer_ID", how="left")
 
 cltv_prediction.head()
-
 
 
 # Creating Segments Based on CLV
@@ -240,7 +234,6 @@ cltv_prediction.head()
 cltv_prediction["segment"] = pd.qcut(cltv_prediction["clv"], 4, labels=["D", "C", "B", "A"])
 
 cltv_prediction.sort_values(by="clv", ascending=False).head()
-
 
 
 # We are creating count, mean, and sum values for all other variables based on the segments.
